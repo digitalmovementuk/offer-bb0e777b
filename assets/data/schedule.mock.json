@@ -1,0 +1,60 @@
+{
+  "_comment": "MOCK: weekly TEMPLATE for EFApi.getSchedule (CONTRACT section 7). Class names, times (24 h, all 60 min) and trainers are the live club schedule as captured in v1.3 index.html #classes, 36 classes Mon-Sun. 'Tinos' on the live schedule is Martijn Taken (BRAND-NOTES 7), shown as 'Martijn'. MOCK: spotsLeft and capacity are INVENTED for the preview (the live numbers live in the GymMaster app); they are not club data and must not be published. Weekend classes run on set dates (BRAND-NOTES 6): the app has the current week. dow: 1=Mon ... 7=Sun. zone: all classes run on the Perform side.",
+  "_mock_fields": ["spotsLeft", "capacity"],
+  "version": "1.0",
+  "updated": "2026-10-01",
+  "source": "mock-of-gymmaster",
+  "tz": "Asia/Makassar",
+  "template": [
+    { "dow": 1, "classes": [
+      {"id": "mon-0800", "start": "08:00", "end": "09:00", "title": "HYROX Conditioning", "trainer": "Rey", "zone": "workout", "spotsLeft": 6, "capacity": 14, "bookable": true},
+      {"id": "mon-0900", "start": "09:00", "end": "10:00", "title": "Boxercise Beginner", "trainer": "Rey", "zone": "workout", "spotsLeft": 3, "capacity": 16, "bookable": true},
+      {"id": "mon-1000", "start": "10:00", "end": "11:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 9, "capacity": 20, "bookable": true},
+      {"id": "mon-1100", "start": "11:00", "end": "12:00", "title": "Booty and Core", "trainer": "Icha", "zone": "workout", "spotsLeft": 12, "capacity": 16, "bookable": true},
+      {"id": "mon-1300", "start": "13:00", "end": "14:00", "title": "Mobility", "trainer": "Martijn", "zone": "workout", "spotsLeft": 2, "capacity": 18, "bookable": true},
+      {"id": "mon-1700", "start": "17:00", "end": "18:00", "title": "Booty", "trainer": "Ain", "zone": "workout", "spotsLeft": 7, "capacity": 16, "bookable": true},
+      {"id": "mon-1800", "start": "18:00", "end": "19:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 5, "capacity": 20, "bookable": true}
+    ] },
+    { "dow": 2, "classes": [
+      {"id": "tue-0700", "start": "07:00", "end": "08:00", "title": "Mobility", "trainer": "Martijn", "zone": "workout", "spotsLeft": 10, "capacity": 18, "bookable": true},
+      {"id": "tue-0800", "start": "08:00", "end": "09:00", "title": "HYROX Conditioning", "trainer": "Rey", "zone": "workout", "spotsLeft": 4, "capacity": 14, "bookable": true},
+      {"id": "tue-1000", "start": "10:00", "end": "11:00", "title": "Booty", "trainer": "Ain", "zone": "workout", "spotsLeft": 8, "capacity": 16, "bookable": true},
+      {"id": "tue-1200", "start": "12:00", "end": "13:00", "title": "Off-Court Training", "trainer": "Rey", "zone": "workout", "spotsLeft": 1, "capacity": 12, "bookable": true},
+      {"id": "tue-1500", "start": "15:00", "end": "16:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 11, "capacity": 20, "bookable": true},
+      {"id": "tue-1630", "start": "16:30", "end": "17:30", "title": "Boxercise Advanced", "trainer": "Rey", "zone": "workout", "spotsLeft": 6, "capacity": 14, "bookable": true},
+      {"id": "tue-1800", "start": "18:00", "end": "19:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 3, "capacity": 20, "bookable": true}
+    ] },
+    { "dow": 3, "classes": [
+      {"id": "wed-0800", "start": "08:00", "end": "09:00", "title": "Boxercise Beginner", "trainer": "Rey", "zone": "workout", "spotsLeft": 9, "capacity": 16, "bookable": true},
+      {"id": "wed-0900", "start": "09:00", "end": "10:00", "title": "Booty and Core", "trainer": "Icha", "zone": "workout", "spotsLeft": 12, "capacity": 16, "bookable": true},
+      {"id": "wed-1000", "start": "10:00", "end": "11:00", "title": "Calisthenics", "trainer": "Martijn", "zone": "workout", "spotsLeft": 2, "capacity": 12, "bookable": true},
+      {"id": "wed-1630", "start": "16:30", "end": "17:30", "title": "Boxercise Advanced", "trainer": "Rey", "zone": "workout", "spotsLeft": 7, "capacity": 14, "bookable": true},
+      {"id": "wed-1800", "start": "18:00", "end": "19:00", "title": "Mobility", "trainer": "Martijn", "zone": "workout", "spotsLeft": 5, "capacity": 18, "bookable": true}
+    ] },
+    { "dow": 4, "classes": [
+      {"id": "thu-0700", "start": "07:00", "end": "08:00", "title": "Body Sculpt", "trainer": "Icha", "zone": "workout", "spotsLeft": 10, "capacity": 16, "bookable": true},
+      {"id": "thu-0830", "start": "08:30", "end": "09:30", "title": "HYROX Conditioning", "trainer": "Rey", "zone": "workout", "spotsLeft": 4, "capacity": 14, "bookable": true},
+      {"id": "thu-1000", "start": "10:00", "end": "11:00", "title": "Mobility", "trainer": "Martijn", "zone": "workout", "spotsLeft": 8, "capacity": 18, "bookable": true},
+      {"id": "thu-1200", "start": "12:00", "end": "13:00", "title": "Off-Court Training", "trainer": "Rey", "zone": "workout", "spotsLeft": 1, "capacity": 12, "bookable": true},
+      {"id": "thu-1630", "start": "16:30", "end": "17:30", "title": "Boxercise Advanced", "trainer": "Rey", "zone": "workout", "spotsLeft": 0, "capacity": 14, "bookable": true}
+    ] },
+    { "dow": 5, "classes": [
+      {"id": "fri-0800", "start": "08:00", "end": "09:00", "title": "Boxercise Beginner", "trainer": "Rey", "zone": "workout", "spotsLeft": 6, "capacity": 16, "bookable": true},
+      {"id": "fri-0900", "start": "09:00", "end": "10:00", "title": "Booty", "trainer": "Ain", "zone": "workout", "spotsLeft": 3, "capacity": 16, "bookable": true},
+      {"id": "fri-1030", "start": "10:30", "end": "11:30", "title": "Mobility", "trainer": "Ain", "zone": "workout", "spotsLeft": 9, "capacity": 18, "bookable": true},
+      {"id": "fri-1400", "start": "14:00", "end": "15:00", "title": "Body Sculpt", "trainer": "Icha", "zone": "workout", "spotsLeft": 12, "capacity": 16, "bookable": true},
+      {"id": "fri-1500", "start": "15:00", "end": "16:00", "title": "Booty and Core", "trainer": "Icha", "zone": "workout", "spotsLeft": 2, "capacity": 16, "bookable": true},
+      {"id": "fri-1700", "start": "17:00", "end": "18:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 7, "capacity": 20, "bookable": true}
+    ] },
+    { "dow": 6, "classes": [
+      {"id": "sat-0800", "start": "08:00", "end": "09:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 5, "capacity": 20, "bookable": true},
+      {"id": "sat-0900", "start": "09:00", "end": "10:00", "title": "Booty", "trainer": "Ain", "zone": "workout", "spotsLeft": 10, "capacity": 16, "bookable": true},
+      {"id": "sat-1100", "start": "11:00", "end": "12:00", "title": "Mobility", "trainer": "Ain", "zone": "workout", "spotsLeft": 4, "capacity": 18, "bookable": true}
+    ] },
+    { "dow": 7, "classes": [
+      {"id": "sun-1400", "start": "14:00", "end": "15:00", "title": "Booty", "trainer": "Ain", "zone": "workout", "spotsLeft": 8, "capacity": 16, "bookable": true},
+      {"id": "sun-1600", "start": "16:00", "end": "17:00", "title": "Mobility", "trainer": "Ain", "zone": "workout", "spotsLeft": 1, "capacity": 18, "bookable": true},
+      {"id": "sun-1800", "start": "18:00", "end": "19:00", "title": "Stretching", "trainer": "Ain", "zone": "workout", "spotsLeft": 11, "capacity": 20, "bookable": true}
+    ] }
+  ]
+}

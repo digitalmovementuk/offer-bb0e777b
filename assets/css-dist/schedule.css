@@ -1,0 +1,73 @@
+.sec.sched{--sched-card-h: 8.5rem;--sched-gap: var(--space-3);--sched-h2: 1.625rem;padding-block: var(--space-5) var(--sec-y-tight);}
+.sched__head{display: grid;justify-items: center;text-align: center;margin-bottom: var(--space-2);}
+.sched__date{margin-bottom: 0.375rem;}
+.sched__date time{font-variant-numeric: tabular-nums;}
+.sched__head h2{font-size: var(--sched-h2);margin-bottom: var(--space-2);}
+.sched .sched__days{position: relative;justify-self: stretch;padding-block: 0.3125rem;gap: var(--space-1);}
+.sched .sched__days::after{content: none;}
+.sched .sched__days > .chip{flex: 1 0 var(--tap);min-width: var(--tap);min-height: var(--tap);justify-content: center;padding-inline: 0.25rem;scroll-snap-align: center;}
+@media (max-width: 374.98px){.sched .sched__days{padding-inline: 0.75rem;scroll-padding-inline: 0.75rem;}
+}
+.sched__rail{margin-top: var(--space-1);}
+.sched__list{display: grid;grid-template-columns: minmax(0,1fr);gap: var(--sched-gap);margin: 0;padding: 0;list-style: none;}
+@media (max-width: 1023.98px){.sched__list[data-state="closed"] .sched__item:not([data-peek]){display: none;}
+html:not(.js) .sched__list[data-state="closed"] .sched__item:not([data-peek]){display: grid;}
+.sched__rail{min-height: calc(2 * var(--sched-card-h) + var(--sched-gap));}
+}
+.sched__item{display: grid;align-content: start;gap: 0.25rem;min-width: 0;min-height: var(--sched-card-h);padding: var(--space-4);background: var(--surface-2);border: 1px solid var(--line);border-radius: var(--r-md);list-style: none;container-type: inline-size;text-align: left;}
+.sched__item[data-next="true"]{border-color: var(--line-strong);}
+.sched__item[data-now="true"]{border-color: var(--live);}
+.sched .sched__item .sched__status{display: flex;align-items: center;justify-content: flex-start;gap: 0.5em;min-height: 1.25rem;margin: 0;text-align: left;}
+.sched__status--live{color: var(--ink);}
+.sched__dot{flex: none;width: 0.5rem;height: 0.5rem;border-radius: var(--r-pill);background: var(--live);}
+.sched__time{margin: 0;color: var(--ink);white-space: nowrap;}
+.sched__name{margin: 0.125rem 0 0;font-size: var(--fs-h3);line-height: 1.12;text-transform: none;}
+.sched__meta{display: flex;flex-wrap: wrap;align-items: baseline;column-gap: 0.4em;min-width: 0;}
+.sched__coach,.sched__spots{margin: 0;font-size: var(--fs-small);line-height: 1.4;color: var(--ink-2);}
+/* MOCK spots: invented numbers, see schedule.mock.json. One text line after the
+   coach on mobile ("with Rey · 7 spots left"), its own line in the desktop rail. */
+.sched__spots::before{content: "\00b7";margin-right: 0.4em;}
+.sched__item[data-past="true"]{opacity: 0.55;}
+.sched__item[data-past="true"] .sched__status,.sched__item[data-past="true"] .sched__coach,.sched__item[data-past="true"] .sched__spots{color: var(--ink);}
+.sched__empty{display: grid;align-content: center;justify-items: center;gap: var(--space-2);min-height: calc(2 * var(--sched-card-h) + var(--sched-gap));margin: 0;padding: var(--space-4);border: 1px dashed var(--line-strong);border-radius: var(--r-md);text-align: center;color: var(--ink);}
+.sched__empty[hidden]{display: none;}
+.sched__empty a{color: var(--ink);}
+.sched__note{margin: var(--space-3) 0 0;text-align: center;color: var(--ink-2);}
+.sched__note[hidden]{display: none;}
+.sched .sched__more{display: flex;width: 100%;margin-top: var(--space-3);}
+.sched .sched__more[hidden]{display: none;}
+.sched__foot{display: grid;gap: var(--space-4);margin-top: var(--space-5);padding-top: var(--space-5);border-top: 1px solid var(--line);text-align: center;}
+.sched__terms{margin: 0 auto;max-width: 44rem;color: var(--ink-2);}
+.sched__actions{justify-content: center;}
+html:not(.js) .sched__days,html:not(.js) .sched__more{display: none;}
+@media (min-width: 760px){.sec.sched{--sched-h2: var(--fs-h2);padding-block: var(--space-6) var(--sec-y-tight);}
+.sched__head{justify-items: start;text-align: left;margin-bottom: var(--space-4);}
+.sched__date{margin-bottom: var(--space-2);}
+.sched__head h2{margin-bottom: var(--space-4);}
+.sched .sched__days{margin-inline: 0;padding-inline: 0;}
+.sched .sched__days > .chip{flex: 0 0 auto;padding-inline: 0.875rem;min-width: var(--tap);}
+.sched__list{grid-template-columns: repeat(2,minmax(0,1fr));}
+.sched__rail{min-height: 0;}
+.sched__empty{min-height: var(--sched-card-h);}
+.sched__note{text-align: left;}
+.sched .sched__more{width: max-content;margin-inline: auto;}
+.sched__foot{grid-template-columns: minmax(0,1fr) auto;align-items: center;text-align: left;gap: var(--space-6);}
+.sched__terms{margin: 0;}
+.sched__actions{justify-content: flex-end;flex-wrap: nowrap;}
+.sched__actions .btn{flex: 0 0 auto;}
+}
+@media (min-width: 1024px){.sched__head{grid-template-columns: minmax(0,1fr) auto;grid-template-areas: "date days" "title days";column-gap: var(--space-6);align-items: end;}
+.sched__date{grid-area: date;margin-bottom: var(--space-2);}
+.sched__head h2{grid-area: title;margin-bottom: 0;}
+.sched .sched__days{grid-area: days;align-self: end;justify-self: end;}
+.sched__rail{overflow-x: auto;overscroll-behavior-x: contain;scroll-snap-type: x proximity;scrollbar-width: thin;scrollbar-color: var(--line-strong) transparent;padding-bottom: var(--space-2);}
+.sched__list{grid-template-columns: none;grid-auto-flow: column;grid-auto-columns: minmax(9.5rem,1fr);gap: var(--space-3);}
+.sched__item{scroll-snap-align: start;gap: 0.375rem;padding: var(--space-3) var(--space-3) var(--space-4);min-height: 11rem;}
+.sched__time{font-size: min(var(--fs-num-m),14.5cqi);}
+.sched__name{font-size: var(--fs-h4);line-height: 1.15;min-height: 2.3em;}
+.sched__meta{flex-direction: column;row-gap: 0;}
+.sched__coach,.sched__spots{font-size: var(--fs-micro);}
+.sched__spots::before{content: none;}
+.sched .sched__more{display: none;}
+.sched__empty{width: 100%;}
+}

@@ -1,0 +1,34 @@
+.zones__head{margin-bottom: var(--space-7);}
+.zones__grid{display: grid;gap: var(--space-5);}
+.zones__grid > *{min-width: 0;}
+.zones__tile{position: relative;display: grid;grid-template-rows: auto 1fr;background: var(--surface-2);border: 1px solid var(--line);border-radius: var(--r-card);overflow: hidden;color: var(--ink);}
+.zones__img{position: relative;margin: 0;aspect-ratio: 4 / 5;overflow: hidden;background: var(--surface-3);}
+.zones__img img{display: block;width: 100%;height: 100%;object-fit: cover;}
+.zones__tile:nth-child(1) .zones__img img{object-position: 30% 50%;}
+.zones__tile:nth-child(2) .zones__img img{object-position: 45% 60%;}
+.zones__tile:nth-child(3) .zones__img img{object-position: 30% 55%;}
+.zones__body{display: grid;align-content: start;gap: var(--space-2);padding: var(--space-5);}
+.zones__label{color: var(--ink-2);}
+.zones__name{font-size: var(--fs-h3);text-transform: uppercase;letter-spacing: 0.04em;}
+.zones__line{color: var(--ink);max-width: 36ch;}
+.zones__link{align-self: end;display: inline-flex;align-items: center;min-height: var(--tap);margin-top: var(--space-2);font-family: var(--ff-display);font-weight: 600;font-size: var(--fs-btn);color: var(--ink);text-decoration: underline;text-decoration-thickness: 2px;text-underline-offset: 0.3em;text-decoration-color: var(--accent);justify-self: start;}
+.zones__link::after{content: "";position: absolute;inset: 0;z-index: 1;}
+.zones__link:focus-visible{outline: none;}
+.zones__link:focus-visible::after{outline: 2px solid var(--ink);outline-offset: -4px;border-radius: var(--r-card);}
+@media (min-width: 760px){.zones__grid{grid-template-columns: 1fr;}
+.zones__tile{grid-template-rows: none;grid-template-columns: minmax(0,2fr) minmax(0,3fr);}
+.zones__img{aspect-ratio: auto;min-height: 100%;}
+.zones__img img{min-height: 20rem;}
+.zones__body{align-content: center;padding: var(--space-6);}
+.zones__label{text-align: left;}
+}
+@media (min-width: 1024px){.zones__grid{grid-template-columns: repeat(3,minmax(0,1fr));gap: var(--space-5);align-items: stretch;}
+.zones__tile{grid-template-columns: none;grid-template-rows: auto 1fr;}
+.zones__img{aspect-ratio: 3 / 4;min-height: 0;}
+.zones__img img{min-height: 0;}
+.zones__body{align-content: start;padding: var(--space-5);}
+.zones__link{margin-top: auto;}
+.zones__body{grid-template-rows: auto auto 1fr auto;}
+}
+@media (min-width: 1024px) and (hover: hover){.zones__img img{height: calc(100% + 2.5rem);margin-block: -1.25rem;}
+}

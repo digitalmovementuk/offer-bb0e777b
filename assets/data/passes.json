@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "currency": "IDR",
+  "updated": "2026-09-17",
+  "source": "elitefitbali.com membership page (page updated 17.09.2026), BRAND-NOTES item 5. MOCK STATUS: prices are real and published; this file is the seed for GET /api/passes and is served by the mock adapter in v2.0.",
+  "lengths": [
+    { "id": "day",  "label": "Day pass",   "chip": "Day",      "per": "day pass", "days": 1 },
+    { "id": "week", "label": "Week",       "chip": "Week",     "per": "7 days",   "days": 7 },
+    { "id": "w4",   "label": "4 weeks",    "chip": "4 weeks",  "per": "4 weeks",  "days": 28 },
+    { "id": "w12",  "label": "12 weeks",   "chip": "12 weeks", "per": "12 weeks", "days": 84 },
+    { "id": "w26",  "label": "26 weeks",   "chip": "26 weeks", "per": "26 weeks", "days": 182 },
+    { "id": "w52",  "label": "52 weeks",   "chip": "52 weeks", "per": "52 weeks", "days": 364 }
+  ],
+  "tiers": [
+    { "id": "perform",  "name": "Perform",  "tag": "Gym floor and classes",   "description": "Gym floor, outdoor area, all classes.",     "prices": { "day": 350000, "week": 1100000, "w4": 2200000, "w12": 5500000, "w26": 10000000, "w52": 18000000 } },
+    { "id": "elite",    "name": "Elite",    "tag": "Gym + Recharge",          "description": "Gym, classes and the whole recovery wing.", "prices": { "day": 450000, "week": 1600000, "w4": 2700000, "w12": 7500000, "w26": 14000000, "w52": 25000000 } },
+    { "id": "recharge", "name": "Recharge", "tag": "Pool deck and recovery",  "description": "The recovery wing only, no gym floor.",     "prices": { "day": 300000, "week": 1000000, "w4": 2000000, "w12": 5000000, "w26": 9000000,  "w52": 14000000 } }
+  ],
+  "duo": {
+    "people": 2,
+    "lengths": ["day", "w4"],
+    "dayPassEach": 225000,
+    "dayPassTiers": ["perform", "elite", "recharge"],
+    "fourWeek": { "perform": 3800000, "elite": 4400000, "recharge": 3400000 }
+  },
+  "classPasses": [
+    { "id": "class-single", "tierId": "class", "lengthId": "c1",  "name": "Single class",    "price": 300000,  "classes": 1 },
+    { "id": "class-10",     "tierId": "class", "lengthId": "c10", "name": "10-class pass",   "price": 2000000, "classes": 10 }
+  ],
+  "notes": [
+    "A day pass is credited toward a membership if you join afterwards.",
+    "Class passes do not include gym floor access.",
+    "Partner discounts around Canggu come with memberships of four weeks or longer."
+  ]
+}
